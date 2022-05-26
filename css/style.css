@@ -3,7 +3,7 @@
 
 /* TODO 1. main settup */
 :root {
-    --main-color: #8e44ad;
+    --main-color: #B8860B;
     --black: #222;
     --white: #fff;
     --light-black: #777;
@@ -167,7 +167,7 @@ section { /* padding header */
 .footer {
     background-size: cover; /*Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges*/
     /*background: url(../images/footer-bg.jpg) no-repeat center;*/
-    background-color: bisque;
+    background-color: #FAEBD7;
 }
 
 .footer .box-container {

@@ -18,7 +18,7 @@
 
 :root{
     --transition: all 0.7s ease;
-    --yellow: #f9d342;
+    --yellow: #382a11;
     --dark: #292826;
 }
 *{
@@ -73,7 +73,7 @@ img{
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 30px;
-    color: var(--yellow);
+    color: #DAA520;
     border-bottom: 5px solid var(--dark);
     width: 235px;
     margin: 15px 0;
@@ -93,7 +93,7 @@ img{
 .room{
     margin: 45px 0;
     padding-bottom: 25px;
-    background: var(--light-black);
+    background: #D2B48C;
     color: #fff;
 }
 .room-text{
