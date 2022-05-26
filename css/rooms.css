@@ -82,6 +82,7 @@ img{
 .sec-width{
     width: 85vw;
     margin: 0 auto!important;
+
 }
 
 /* room */
@@ -97,9 +98,10 @@ img{
 }
 .room-text{
     padding: 5px 20px;
+    font-size: 20px;
 }
 .room-text h3{
-    font-size: 24px;
+    font-size: 35px;
 }
 .room-text ul{
     list-style-type: none;
@@ -109,7 +111,7 @@ img{
     padding: 7px 0;
 }
 .room-text ul li i{
-    color: var(--yellow);
+    /*color: var(--yellow);*/
     margin-right: 10px;
 }
 .rate{
