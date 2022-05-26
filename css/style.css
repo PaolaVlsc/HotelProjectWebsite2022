@@ -114,35 +114,38 @@ section { /* padding header */
 
 @media (max-width: 768px) {
     /* εμφάνιση του menu btn */
-    #menu-btn{
+    #menu-btn {
         display: inline-block;
-        transition: .2s linear; // κίνηση
+        transition: .2s linear;
+    / / κίνηση
     }
 
     /* prosthhkh kinhsh sto menu btn */
-    #menu-btn.fa-times{
+    #menu-btn.fa-times {
         transform: rotate(180deg);
     }
 
-    .header .navbar{
+    .header .navbar {
         position: absolute;
-        top:99%; left:0; right:0;
+        top: 99%;
+        left: 0;
+        right: 0;
         background-color: var(--white);
         border-top: var(--border);
-        padding:2rem;
+        padding: 2rem;
 
         transition: .2s linear; /* emfaniontai me seira to ena katw apo to allo */
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /*allows you to specify a specific region of an element to display, with the rest being hidden (or “clipped”) away.*/
 
     }
 
-    .header .navbar.active{
+    .header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
-    .header .navbar a{
+    .header .navbar a {
         display: block;
-        margin:2rem;
+        margin: 2rem;
         text-align: center;
     }
 }
@@ -151,4 +154,59 @@ section { /* padding header */
     html {
         font-size: 50%;
     }
+}
+
+
+/* TODO 3. FOOTER */
+.footer {
+    background-size: cover; /*Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges*/
+    /*background: url(../images/footer-bg.jpg) no-repeat center;*/
+    background-color: bisque;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem; /*padding*/
+}
+
+.footer .box-container .box h3 {
+    color:var(--black);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box a{
+    color:var(--light-black);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: block; /* to ena katw apo to allo */
+}
+
+.footer .box-container .fontmine a{
+    text-transform: none;
+}
+
+/* settings gia ta "icons" */
+.footer .box-container .box a i{
+    color:var(--main-color);
+    padding-right: .5rem;
+    transition: .2s linear;
+}
+
+/* προσθήκη κίνησης κατά το hover */
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+.footer .credit{
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: .1rem solid var(--light-white);
+    font-size: 2rem;
+    color:var(--white);
+}
+
+.footer .credit span{
+    color:var(--main-color);
 }
