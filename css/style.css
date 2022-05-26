@@ -163,6 +163,7 @@ section { /* padding header */
 
 
 /* TODO 3. FOOTER */
+/* FIXME: Επικοινωνία να μην πατιέται */
 .footer {
     background-size: cover; /*Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges*/
     /*background: url(../images/footer-bg.jpg) no-repeat center;*/
@@ -188,7 +189,7 @@ section { /* padding header */
     display: block; /* to ena katw apo to allo */
 }
 
-.footer .box-container .fontmine a{
+.footer .box-container .fontmine a, .home-about .content h3{
     text-transform: none;
 }
 
@@ -250,5 +251,134 @@ section { /* padding header */
     margin-bottom: 3rem;
     font-size: 6rem;
     text-transform: uppercase;
+    color:var(--black);
+}
+
+/* TODO 6: header image*/
+.home{
+    padding:0;
+}
+
+.home .slide{
+    text-align: center;
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 60rem;
+}
+
+.home .slide .content{
+    width: 85rem;
+    display: none;
+}
+
+.home .swiper-slide-active .content{
+    display: inline-block;
+}
+
+.home .slide .content span{
+    display: block;
+    font-size: 2.2rem;
+    color: var(--light-white);
+    padding-bottom: 1rem;
+    animation:fadeIn .2s linear backwards .2s;
+}
+
+.home .slide .content h3{
+    font-size: 6vw;
+    color:var(--white);
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: var(--text-shadow);
+    padding:1rem 0;
+    animation:fadeIn .2s linear backwards .4s;
+}
+
+.home .slide .content .btn{
+    animation:fadeIn .2s linear backwards .6s;
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev{
+    top:inherit;
+    left: inherit;
+    bottom: 0;
+    right: 0;
+    height: 7rem;
+    width: 7rem;
+    background: var(--white);
+    color:var(--black);
+}
+
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover{
+    background: var(--main-color);
+    color:var(--white);
+}
+
+.home .swiper-button-next::after,
+.home .swiper-button-prev::after{
+    font-size: 2rem;
+}
+
+.home .swiper-button-prev{
+    right: 7rem;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--black);
+    margin-top: 1rem;
+    color:var(--white);
+    font-size: 1.7rem;
+    padding:1rem 3rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--main-color);
+}
+
+/*@keyframes fadeIn {*/
+/*    0%{*/
+/*        transform: scale(0);*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
+
+
+/* TODO 7: About us homepage*/
+.home-about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-about .image{
+    flex:1 1 41rem;
+}
+
+.home-about .image img{
+    width: 100%;
+}
+
+.home-about .content{
+    flex:1 1 41rem;
+    padding:3rem;
+    background: var(--light-bg);
+}
+
+.home-about .content h3{
+    font-size: 3rem;
+    color:var(--black);
+}
+
+.home-about .content p{
+    font-size: 1.5rem;
+    padding:1rem 0;
+    line-height: 2;
     color:var(--black);
 }
