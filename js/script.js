@@ -24,7 +24,7 @@ var swiper = new Swiper(".home-slider", {
     },
 });
 
-
+// slider for reviews
 var swiper = new Swiper(".reviews-slider", {
     grabCursor:true,
     loop:true,
