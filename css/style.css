@@ -384,3 +384,21 @@ section { /* padding header */
     line-height: 2;
     color:var(--black);
 }
+
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #ddd;
+    color: var(--main-color);
+}
