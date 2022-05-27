@@ -78,14 +78,26 @@ section { /* padding header */
 
 /* TODO 2.2.1 navbar: links settings*/
 .header .navbar a {
-    font-size: 2rem;
+    font-size: 17px;
+    font-weight: bold;
     margin-left: 2rem;
     color: var(--black);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 /* TODO 2.2.2 navbar: links hover settings*/
 .header .navbar a:hover {
     color: var(--main-color);
+    background-color: #ddd;
+    border-radius: 20px;
+}
+
+.navbar a.active {
+    background-color: #ddd;
+    color: var(--main-color);
+    border-radius: 20px;
 }
 
 
@@ -385,20 +397,3 @@ section { /* padding header */
     color:var(--black);
 }
 
-.navbar a {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.navbar a.active {
-    background-color: #ddd;
-    color: var(--main-color);
-}
