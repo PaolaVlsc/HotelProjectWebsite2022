@@ -4,8 +4,7 @@ CREATE DATABASE Elite;
 DROP user IF EXISTS 'uniwa'@'localhost';
 CREATE user 'uniwa' @'localhost';
 ALTER USER 'uniwa'@'localhost' IDENTIFIED BY '1234';
-GRANT ALL privileges ON Elite.* TO 'uniwa'@'localhost';
-REVOKE ALL PRIVILEGES ON `elite`.* FROM 'uniwa'@'localhost'; GRANT ALL PRIVILEGES ON `elite`.* TO 'uniwa'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON `elite`.* TO 'uniwa'@'localhost' WITH GRANT OPTION;
 
 USE Elite;
 
