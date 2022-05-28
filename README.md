@@ -22,10 +22,10 @@ Contact Page & Function DONE
 # ΠΩΣ ΛΕΙΤΟΥΡΓΕΙ 
 
 1. Κατεβάζεις όλα τα αρχεία 
-2. Το τοποθετείς στον κατάλληλο φάκελο: xampp>httdocs>Hotel
+2. Το τοποθετείς στον κατάλληλο φάκελο: xampp>httdocs>EliteHotel
 3. Ενεργοποιείς το xampp ( apache & mysql ) 
 4. Στη phpmyadmin κάνεις import το αρχείο database_elite.sql
-5. Μετά στον browser: localhost/Hotel
+5. Μετά στον browser: localhost/EliteHotel
 
 ΕΤΟΙΜΟΣ
 
@@ -34,3 +34,7 @@ Contact Page & Function DONE
 https://uniwagr-my.sharepoint.com/:w:/g/personal/cs161020_uniwa_gr/EUPIh2V2_LhDiSScSaRLhD8Br4H5c0X4kFVzVx2I82e9xg?e=niA6Rg
 
 1. Open in desktop app
+
+# ΕΚΦΩΝΗΣΗ
+
+https://eclass.uniwa.gr/modules/work/?course=CS141&get=29225&file_type=1
