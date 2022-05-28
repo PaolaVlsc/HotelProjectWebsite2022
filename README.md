@@ -22,9 +22,9 @@ Contact Page & Function DONE
 # ΠΩΣ ΛΕΙΤΟΥΡΓΕΙ 
 
 1. Κατεβάζεις όλα τα αρχεία 
-2. Το τοποθετείς στον κατάλληλο φάκελο: xampp>httdocs
+2. Το τοποθετείς στον κατάλληλο φάκελο: xampp>httdocs>Hotel
 3. Ενεργοποιείς το xampp ( apache & mysql ) 
 4. Στη phpmyadmin κάνεις import το αρχείο database_elite.sql
-5. Μετά στον browser: localhost/HotelProjectWebsite2022/index.html
+5. Μετά στον browser: localhost/Hotel
 
 ΕΤΟΙΜΟΣ
