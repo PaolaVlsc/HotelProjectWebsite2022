@@ -31,6 +31,7 @@
     outline: none;
     color: black;
     transition: 0.5s;
+    text-transform: none;
 }
 .contact-form-text:focus{
     box-shadow: 0 0 10px 4px #CD853F;
@@ -57,4 +58,9 @@ textarea.contact-form-text{
 .contact-section h1 {
      font-size: 40px;
     text-transform: none;
+}
+
+.contact-form  span {
+    font-size: 14px;
+    display: none;
 }
