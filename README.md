@@ -17,3 +17,14 @@ Contact Page & Function DONE
 
 ΤΙ ΜΕΝΕΙ ;; 
 ΚΡΑΤΗΣΗ
+
+
+# ΠΩΣ ΛΕΙΤΟΥΡΓΕΙ 
+
+1. Κατεβάζεις όλα τα αρχεία 
+2. Το τοποθετείς στον κατάλληλο φάκελο: xampp>httdocs
+3. Ενεργοποιείς το xampp ( apache & mysql ) 
+4. Στη phpmyadmin κάνεις import το αρχείο database_elite.sql
+5. Μετά στον browser: localhost/HotelProjectWebsite2022/index.html
+
+ΕΤΟΙΜΟΣ
