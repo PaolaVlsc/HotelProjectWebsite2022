@@ -12,4 +12,8 @@ FIXME NEXT: Add "check availability"
 FIXME NEXT: Add "Login Button" 
 
 [DAY 2] 
+Contact Page & Function DONE
 
+
+ΤΙ ΜΕΝΕΙ ;; 
+ΚΡΑΤΗΣΗ
