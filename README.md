@@ -32,3 +32,5 @@ Contact Page & Function DONE
 # ΕΓΓΡΑΦΟ ΤΕΚΜΗΡΙΩΣΗΣ
 
 https://uniwagr-my.sharepoint.com/:w:/g/personal/cs161020_uniwa_gr/EUPIh2V2_LhDiSScSaRLhD8Br4H5c0X4kFVzVx2I82e9xg?e=niA6Rg
+
+1. Open in desktop app
