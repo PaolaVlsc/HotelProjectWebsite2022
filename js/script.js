@@ -48,16 +48,18 @@ var swiper = new Swiper(".reviews-slider", {
 const form = document.querySelector("form"),
     statusTxt = form.querySelector(".contact-form span");
 form.onsubmit = (e)=>{
-    e.preventDefault();
-    statusTxt.style.color = "black";
+    e.preventDefault(); // να μην πατιέται το κουμπί
+    statusTxt.style.color = "black"; // ρύθμιση χρώματος
     statusTxt.style.display = "block";
     statusTxt.innerText = "Αποστολή μηνύματος...";
     form.classList.add("disabled");
-    let xhr = new XMLHttpRequest();
+
+    let xhr = new XMLHttpRequest(); // create an ajax object
     xhr.open("POST", "message.php", true);
     xhr.onload = ()=>{
         if(xhr.readyState == 4 && xhr.status == 200){
             let response = xhr.response;
+            // εμφάνιση κατάλληλου μηνύματος για σφάλματα
             if(response.indexOf("required") != -1 || response.indexOf("έγκυρο") != -1 || response.indexOf("failed") != -1){
                 statusTxt.style.color = "red";
             }else{
