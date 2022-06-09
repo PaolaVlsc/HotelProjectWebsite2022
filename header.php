@@ -16,6 +16,8 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php"); ?>
                 <a href="booking.php" class="<?= ($activePage == 'booking') ? 'active':''; ?>" >Κράτηση</a></li>
             <li>
                 <a href="contact.php" class="<?= ($activePage == 'contact') ? 'active':''; ?>" >Επικοινωνία</a></li>
+            <li>
+                <a href="login.php" class="<?= ($activePage == 'login') ? 'active':''; ?>" >Σύνδεση</a></li>
         </ul>
     </nav>
     <!-- navigation bar end -->
