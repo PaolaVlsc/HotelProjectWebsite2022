@@ -16,25 +16,8 @@
 </head>
 <body>
 
-<!-- TODO 1. HEADER start -->
-<section class="header">
-    <div class="logo">
-        ELITE
-    </div>
-    <!-- TODO 2. navigation bar -->
-    <nav class="navbar">
-        <a href="index.php">Αρχική</a>
-        <a href="rooms.html" class="active">Δωμάτια</a>
-        <a href="booking.php">Κράτηση</a>
-        <a href="contact.php">Επικοινωνία</a>
-    </nav>
-    <!-- navigation bar end -->
+<?php include 'include\header.php'; ?>
 
-    <!-- TODO 3. menu button (responsive)-->
-    <div id="menu-btn" class="fas fa-bars"></div>
-    <!--  menu button (responsive) end-->
-
-</section>
 <!-- HEADER end -->
 
 <!-- TODO 5. Rooms-->
