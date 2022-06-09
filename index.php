@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<?php include 'include\header.php'; ?>
+<?php include 'header.php'; ?>
 
 <!-- HEADER navbar end -->
 
@@ -126,6 +126,8 @@
         <!--<a href="about.php" class="btn">read more</a> -->
     </div>
 </section>
+
+
 <!-- TODO 4. Footer start -->
 
 <section class="footer">
