@@ -45,8 +45,11 @@ var swiper = new Swiper(".reviews-slider", {
 
 
 //Contact Form in PHP
-const form = document.querySelector("form"),
-    statusTxt = form.querySelector(".contact-form span");
+
+
+// Δήλωση μεταβλητών - Σύνδεση με τα elements
+const form = document.querySelector("form"), statusTxt = form.querySelector(".contact-form span");
+
 form.onsubmit = (e)=>{
     e.preventDefault(); // να μην πατιέται το κουμπί
     statusTxt.style.color = "black"; // ρύθμιση χρώματος

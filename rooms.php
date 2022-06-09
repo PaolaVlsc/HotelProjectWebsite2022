@@ -23,10 +23,10 @@
     </div>
     <!-- TODO 2. navigation bar -->
     <nav class="navbar">
-        <a href="index.html">Αρχική</a>
+        <a href="index.php">Αρχική</a>
         <a href="rooms.html" class="active">Δωμάτια</a>
-        <a href="booking.html">Κράτηση</a>
-        <a href="contact.html">Επικοινωνία</a>
+        <a href="booking.php">Κράτηση</a>
+        <a href="contact.php">Επικοινωνία</a>
     </nav>
     <!-- navigation bar end -->
 
@@ -163,10 +163,10 @@
 
         <div class="box">
             <h3>Συντομεύσεις</h3>
-            <a href="index.html"> <i class="fas fa-angle-right"></i> Αρχική</a>
+            <a href="index.php"> <i class="fas fa-angle-right"></i> Αρχική</a>
             <a href="rooms.html"> <i class="fas fa-angle-right"></i> Δωμάτια</a>
-            <a href="booking.html"> <i class="fas fa-angle-right"></i> Κράτηση</a>
-            <a href="contact.html"> <i class="fas fa-angle-right"></i> Επικοινωνία</a>
+            <a href="booking.php"> <i class="fas fa-angle-right"></i> Κράτηση</a>
+            <a href="contact.php"> <i class="fas fa-angle-right"></i> Επικοινωνία</a>
         </div>
 
         <div class="box fontmine">

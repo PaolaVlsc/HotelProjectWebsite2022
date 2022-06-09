@@ -21,10 +21,16 @@
     </div>
     <!-- TODO 2. navigation bar -->
     <nav class="navbar">
-        <a href="index.html" class="active">Αρχική</a>
-        <a href="rooms.html">Δωμάτια</a>
-        <a href="booking.html">Κράτηση</a>
-        <a href="contact.html">Επικοινωνία</a>
+        <ul>
+            <li><a href="index.php" class="active">Αρχική</a></li>
+            <li>
+                <a href="rooms.php">Δωμάτια</a></li>
+            <li>
+                <a href="booking.php">Κράτηση</a></li>
+            <li>
+                <a href="contact.php">Επικοινωνία</a></li>
+            </li>
+        </ul>
     </nav>
     <!-- navigation bar end -->
 
@@ -114,7 +120,7 @@
 
 <!-- TODO 7. Map -->
 <section class="map">
-        <div class="content">
+    <div class="content">
         <h3>Πού βρισκόμαστε;</h3>
         <p>Το ξενοδοχείο "ELITE" βρίσκεται στα... </p>
     </div>
@@ -126,7 +132,6 @@
     </div>
 </section>
 <!-- end of map -->
-
 
 
 <!-- TODO 6. About us Homepage start -->
@@ -153,9 +158,9 @@
         <div class="box">
             <h3>Συντομεύσεις</h3>
             <a href="index.html"> <i class="fas fa-angle-right"></i> Αρχική</a>
-            <a href="rooms.html"> <i class="fas fa-angle-right"></i> Δωμάτια</a>
-            <a href="booking.html"> <i class="fas fa-angle-right"></i> Κράτηση</a>
-            <a href="contact.html"> <i class="fas fa-angle-right"></i> Επικοινωνία</a>
+            <a href="rooms.php"> <i class="fas fa-angle-right"></i> Δωμάτια</a>
+            <a href="booking.php"> <i class="fas fa-angle-right"></i> Κράτηση</a>
+            <a href="contact.php"> <i class="fas fa-angle-right"></i> Επικοινωνία</a>
         </div>
 
         <div class="box fontmine">
