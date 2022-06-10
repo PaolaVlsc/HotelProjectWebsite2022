@@ -17,11 +17,12 @@ CREATE TABLE users_employee (
                               surname VARCHAR(50),
                               email VARCHAR(50),
                               phone VARCHAR(50),
+                              username VARCHAR(50),
                               password VARCHAR(50),
                               PRIMARY KEY(id)
 );
 
-INSERT INTO users_employee (name, surname, email, phone, password) VALUES ("Paola", "cs161020", "690000000", "cs161020@uniwa.gr", "1234paola");
+INSERT INTO users_employee (name, surname, email, phone,username, password) VALUES ("Paola", "cs161020", "690000000", "cs161020@uniwa.gr", "paolaelite", "1234paola");
 
 DROP TABLE IF EXISTS contact_data;
 

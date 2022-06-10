@@ -2,7 +2,7 @@
 
 
 // connect to database with mysqli_connect - > PREPARED STATEMENT, mySQL , mysqli
-$my_sqli = mysqli_connect("localhost", "uniwa", "1234", "elite");
+$my_sqli = mysqli_connect("localhost", "elite_admin", "1234", "elite");
 // check if connected
 if (mysqli_connect_errno()) {
     printf("Connection failed: %s\n", mysqli_connect_error);

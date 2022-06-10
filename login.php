@@ -23,21 +23,29 @@
             <span class="title">Σύνδεση
             </span>
 
-            <form action="#">
+            <form action="include/login.inc.php" method="POST">
                 <div class="input-field">
-                    <input type="text" placeholder="Όνομα χρήστη" required>
+                    <input type="text" name="username" placeholder="Όνομα χρήστη" required>
                     <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="input-field">
-                    <input type="password" class="password" placeholder="Κωδικός πρόσβασης" required>
+                    <input type="password" name="pwd" class="password" placeholder="Κωδικός πρόσβασης" required>
                     <i class="uil uil-lock icon"></i>
                     <i class="uil uil-eye-slash showHidePw"></i>
                 </div>
 
                 <div class="input-field button">
-                    <input type="submit" value="Login Now">
+                    <input type="submit" name="submit" value="Login Now">
                 </div>
             </form>
+
+            <?php
+                if(isset($_GET["error"])){
+                    if($_GET["error"] == "wronglogin"){
+                        echo "<p>Wrong input</p>";
+                    }
+                }
+            ?>
 
             <div class="login-signup">
                     <span class="text">
