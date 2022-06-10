@@ -23,6 +23,7 @@ CREATE TABLE users_employee (
 );
 
 INSERT INTO users_employee (name, surname, email, phone,username, password) VALUES ("Paola", "cs161020", "690000000", "cs161020@uniwa.gr", "paolaelite", "1234paola");
+INSERT INTO users_employee (name, surname, email, phone,username, password) VALUES ("Nikos", "cs161127", "690000000", "cs161020@uniwa.gr", "nikoselite", "1234nikos");
 
 DROP TABLE IF EXISTS contact_data;
 

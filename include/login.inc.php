@@ -5,7 +5,7 @@ if(isset($_POST["submit"]))
     echo "it works";
     // grab data from the post
 
-    $username = $_POST["name"];
+    $username = $_POST["username"];
     $password = $_POST["pwd"];
 
     // establish connection - get code
