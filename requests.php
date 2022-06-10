@@ -20,8 +20,9 @@
 <?php
 if(!isset($_SESSION['username']))
 {
-    echo "DENIED ACCES";
+    echo "<h1>DENIED ACCESS</h1>";
 }else
 {
     echo "WELCOME";
-}
+    require_once 'displayMessages.inc.php';
+} ?>
