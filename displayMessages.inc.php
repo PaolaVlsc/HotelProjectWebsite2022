@@ -1,11 +1,9 @@
 <?php
 include_once 'include/dbh.inc.php';
-if(!isset($_SESSION['username']))
-{
+if (!isset($_SESSION['username'])) {
     echo "<h1>DENIED ACCESS</h1>";
     exit();
-}else
-{
+} else {
     echo "WELCOME";
 }
 ?>
@@ -39,71 +37,107 @@ if(!isset($_SESSION['username']))
         </tr>
         </thead>
         <tbody>
-        <?php
-        $sql = "SELECT * FROM contact_data";
-        $result = mysqli_query($conn, $sql);
-        if ($result) {
+                <?php
+                $sql = "SELECT * FROM contact_data";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
 
-            while ($row = mysqli_fetch_assoc($result)) {
-                $id = $row['id'];
-                $name = $row['name'];
-                $surname = $row['surname'];
-                $email = $row['email'];
-                $phone = $row['phone'];
-                $message = $row['message'];
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id = $row['id'];
+                        $name = $row['name'];
+                        $surname = $row['surname'];
+                        $email = $row['email'];
+                        $phone = $row['phone'];
+                        $message = $row['message'];
 
-                echo "  <td>" . $id . "</td> 
-                      <td>" . $name . "</td>    
-                      <td>" . $surname . "</td>  
-                      <td>" . $email . "</td>  
-                      <td>" . $phone . "</td>  
-                      <td><button  class='btn'><a href=\"include/view.inc.php?viewid=" . $id . "\" >View</a></button></td>  ";
+                        echo "  <td>" . $id . "</td>
+                              <td>" . $name . "</td>
+                              <td>" . $surname . "</td>
+                              <td>" . $email . "</td>
+                              <td>" . $phone . "</td>
+                              <td><button  class='btn'><a href=\"include/view.inc.php?viewid=" . $id . "\" >View</a></button></td>  ";
 
-            }
-        }
-        ?>
+                    }
+                }
+                ?>
 
-        <!--
-           <tr>
-              <td data-label="id">1</td>
-              <td data-label="name">Paola</td>
-              <td data-label="surname">Velasco</td>
-              <td data-label="email">paola@uniwa.gr</td>
-              <td data-label="phone">6936000000</td>
-              <td data-label="message"><a href="#" class="btn">View</a></td>
-          </tr>
-          <tr>
-              <td data-label="id">1</td>
-              <td data-label="name">Paola</td>
-              <td data-label="surname">Velasco</td>
-              <td data-label="email">paola@uniwa.gr</td>
-              <td data-label="phone">6936000000</td>
-              <td data-label="message"><a href="#" class="btn">View</a></td>
-          </tr>
-          <tr>
-              <td data-label="id">1</td>
-              <td data-label="name">Paola</td>
-              <td data-label="surname">Velasco</td>
-              <td data-label="email">paola@uniwa.gr</td>
-              <td data-label="phone">6936000000</td>
-              <td data-label="message"><a href="#" class="btn">View</a></td>
-          </tr>
-          <tr>
-              <td data-label="id">1</td>
-              <td data-label="name">Paola</td>
-              <td data-label="surname">Velasco</td>
-              <td data-label="email">paola@uniwa.gr</td>
-              <td data-label="phone">6936000000</td>
-              <td data-label="message"><a href="#" class="btn">View</a></td>
-          </tr>
-          <tr>
-              <td data-label="id">1</td>
-              <td data-label="name">Paola</td>
-              <td data-label="surname">Velasco</td>
-              <td data-label="email">paola@uniwa.gr</td>
-              <td data-label="phone">6936000000</td>
-              <td data-label="message"><a href="#" class="btn">View</a></td>
-          </tr>-->
+
+<!--        <tr>-->
+<!--            <td data-label="id">1</td>-->
+<!--            <td data-label="name">Paola</td>-->
+<!--            <td data-label="surname">Velasco</td>-->
+<!--            <td data-label="email">paola@uniwa.gr</td>-->
+<!--            <td data-label="phone">6936000000</td>-->
+<!--            <td data-label="message"><a href="#" class="btn">View</a></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td data-label="id">1</td>-->
+<!--            <td data-label="name">Paola</td>-->
+<!--            <td data-label="surname">Velasco</td>-->
+<!--            <td data-label="email">paola@uniwa.gr</td>-->
+<!--            <td data-label="phone">6936000000</td>-->
+<!--            <td data-label="message"><a href="#" class="btn">View</a></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td data-label="id">1</td>-->
+<!--            <td data-label="name">Paola</td>-->
+<!--            <td data-label="surname">Velasco</td>-->
+<!--            <td data-label="email">paola@uniwa.gr</td>-->
+<!--            <td data-label="phone">6936000000</td>-->
+<!--            <td data-label="message"><a href="#" class="btn">View</a></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td data-label="id">1</td>-->
+<!--            <td data-label="name">Paola</td>-->
+<!--            <td data-label="surname">Velasco</td>-->
+<!--            <td data-label="email">paola@uniwa.gr</td>-->
+<!--            <td data-label="phone">6936000000</td>-->
+<!--            <td data-label="message"><a href="#" class="btn">View</a></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td data-label="id">1</td>-->
+<!--            <td data-label="name">Paola</td>-->
+<!--            <td data-label="surname">Velasco</td>-->
+<!--            <td data-label="email">paola@uniwa.gr</td>-->
+<!--            <td data-label="phone">6936000000</td>-->
+<!--            <td data-label="message">-->
+<!--                <button class = "btn btn-primary" onclick="loadData(this.getAttribute('data-id'));" data-id="--><?php //echo "$row['id']"; ?><!--">-->
+<!--                    Details-->
+<!--                </button>-->
+<!--            </td>-->
+<!--        </tr>-->
         </tbody>
     </table>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        Customer Detail
+                    </h4>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                    </button>
+                </div>
+
+                <div id="modal-body">
+                    Press ESC button to exit.
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        OK
+                    </button>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+
+    </div><!-- /.modal -->
 </div>
