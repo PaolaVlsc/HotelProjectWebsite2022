@@ -60,8 +60,6 @@ if (!isset($_SESSION['username'])) {
                     }
                 }
                 ?>
-
-
 <!--        <tr>-->
 <!--            <td data-label="id">1</td>-->
 <!--            <td data-label="name">Paola</td>-->
