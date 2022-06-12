@@ -69,7 +69,18 @@ require_once 'availableRooms.php';
             <p class="rate">
                 <span>45.00€/</span> διανυκτέρευση
             </p>
-            <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>
+            <form id="reservation_form" action="include/reservation_form.php" method="POST">
+                <input type="hidden" name="room" id="room">
+                <button id="buttonSingle" name="buttonSingle" type="submit" class="btn">ΚΡΑΤΗΣΗ</button>
+            </form>
+
+
+            <form method="post" action="include/typeAvailableRooms.php">
+                <input type="hidden" name="first_name" value="Single">
+                <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
+            </form>
+
+
         </div>
         </article>
         <!-- end of single room -->
@@ -113,8 +124,10 @@ require_once 'availableRooms.php';
             <p class="rate">
                 <span>60.00€/</span> διανυκτέρευση
             </p>
-            <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>
-        </div>
+            <form method="post" action="include/typeAvailableRooms.php">
+                <input type="hidden" name="first_name" value="Deluxe">
+                <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
+            </form>        </div>
         </article>
         <!-- end of double room -->
 
@@ -159,11 +172,19 @@ require_once 'availableRooms.php';
             <p class="rate">
                 <span>114.00€ /</span> διανυκτέρευση
             </p>
-            <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>
+            <form method="post" action="include/typeAvailableRooms.php">
+                <input type="hidden" name="first_name" value="Superior">
+                <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
+            </form>
         </div>
         </article>
         <!-- end of deluxe room -->
     </div>
+
+    <?php
+        if( ($single === false ) && ($double_room === false ) && ($deluxe === false ))
+            echo "<h1>No available rooms given date</h1>"
+    ?>
 </section>
 
 <!-- end rooms -->
@@ -326,6 +347,7 @@ require_once 'availableRooms.php';
         $('#deluxe_room_hide').hide();
     });</script>
 <script src="js/script.js"></script>
+
 
 </body>
 </html>
