@@ -12,14 +12,130 @@
     <!-- σύνδεση με τη css   -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/rooms.css">
 </head>
 <body>
 
 <!-- TODO 1 . HEADER start -->
 <?php include 'header.php'; ?>
-
 <!-- HEADER end -->
 
+
+<!-- rooms -->
+
+<section class="rooms sec-width" id="rooms">
+    <div class="title">
+        <h2>E L I T E</h2>
+    </div>
+    <div class="rooms-container">
+        <!-- Standard Μονόκλινο Δωμάτιο room start-->
+        <article id="standard_room" class="room" style="min-height: 50vh">
+            <div class="room-image">
+                <img src="images/img3.jpg" alt="room image">
+            </div>
+            <div class="room-text">
+                <h3>Standard Μονόκλινο Δωμάτιο</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                        <i class="fa-solid fa-person"></i> Max
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                        <i class="fa-solid fa-bed"></i> | 1 μονό κρεβάτι
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                        <i class="fa-solid fa-shower sub"></i><i class="fa-solid fa-snowflake"></i><i
+                                class="fa-solid fa-wifi"></i><i class="fa-solid fa-toilet"></i>
+                        <i class="fa-solid fa-wheelchair"></i><i class="fa fa-phone"></i>
+                    </li>
+
+                </ul>
+                <p class="rate">
+                    <span>45.00€/</span> διανυκτέρευση
+                </p>
+                <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>
+            </div>
+        </article>
+        <!-- end of single room -->
+        <!-- single room -->
+        <article id="double_room" class="room" style="min-height: 50vh">
+            <div class="room-image">
+                <img src="images/img2.jpg" alt="room image">
+            </div>
+            <div class="room-text">
+                <h3>Standard Δίκλινο Δωμάτιο </h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                        <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                        <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                        <i class="fa-solid fa-shower"></i>
+                        <i class="fa-solid fa-snowflake"></i>
+                        <i class="fa-solid fa-wifi"></i>
+                        <i class="fa-solid fa-toilet"></i>
+                        <i class="fa-solid fa-wheelchair"></i>
+                        <i class="fa fa-phone"></i>
+                        <i class="fa-solid fa-tv"></i>
+                        <i class="fa-solid fa-couch"></i>
+                    </li>
+                </ul>
+                <p class="rate">
+                    <span>60.00€/</span> διανυκτέρευση
+                </p>
+                <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>
+            </div>
+        </article>
+        <!-- end of single room -->
+        <!-- single room -->
+        <article id="deluxe_room" class="room" style="min-height: 50vh">
+            <div class="room-image">
+                <img src="images/img3.jpg" alt="room image">
+            </div>
+            <div class="room-text">
+                <h3>Premium Δίκλινο Δωμάτιο</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                        <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                        <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
+                    </li>
+                    <li>
+                        <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                        <i class="fa-solid fa-shower"></i>
+                        <i class="fa-solid fa-snowflake"></i>
+                        <i class="fa-solid fa-wifi"></i>
+                        <i class="fa-solid fa-toilet"></i>
+                        <i class="fa-solid fa-wheelchair"></i>
+                        <i class="fa fa-phone"></i>
+                        <i class="fa-solid fa-tv"></i>
+                        <i class="fa-solid fa-couch"></i>
+                        <i class="fa-solid fa-computer"></i>
+                        <i class="fa-solid fa-person-swimming"></i>
+                        <i class="fa-solid fa-utensils"></i>
+                    </li>
+                </ul>
+                <p class="rate">
+                    <span>114.00€ /</span> διανυκτέρευση
+                </p>
+                <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>
+            </div>
+        </article>
+        <!-- end of single room -->
+    </div>
+</section>
+
+<!-- end rooms -->
 <!-- TODO 5. Reviews -->
 <!-- reviews section starts  -->
 
@@ -154,7 +270,8 @@
 
     </div>
 
-    <div class="credit" ><span style="text-transform: none;"> created by UniWA |  ΠΑΝΑΓΗΣ ΝΙΚΟΛΑΟΣ cs161142  | ΒΕΛΑΣΚΟ ΠΑΟΛΑ cs161020 </span></div>
+    <div class="credit"><span style="text-transform: none;"> created by UniWA |  ΠΑΝΑΓΗΣ ΝΙΚΟΛΑΟΣ cs161142  | ΒΕΛΑΣΚΟ ΠΑΟΛΑ cs161020 </span>
+    </div>
 
 </section>
 
@@ -165,6 +282,15 @@
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 <!-- σύνδεση με τη javascript   -->
+
+<!-- enable jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>$(document).ready(function () {
+        $('#standard_room').hide();
+        $('#standard_room').hide();
+        $('#deluxe_room').hide();
+    });</script>
 <script src="js/script.js"></script>
 
 </body>
