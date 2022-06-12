@@ -2,9 +2,19 @@
 include_once 'include/dbh.inc.php';
 
 
-$sql = "SELECT distinct roomtype
-FROM
-    room where room_num not in ( SELECT
+if(isset($_POST['formDate']))
+{
+    echo "OKAY";
+
+    $start_date = date('Y-m-d', strtotime($_POST['checkin-date']));
+    $end_date = date('Y-m-d', strtotime($_POST['checkout-date']));
+
+
+    echo $start_date;
+    echo $end_date;
+}
+
+$sql = "SELECT * from room where room_num not in ( SELECT
             room.room_num
         FROM
             room
@@ -12,11 +22,12 @@ FROM
             reservation ON reservation.room_num = room.room_num
         WHERE (
                 -- wished booking date is after or at the DOR date
-                date_checked_in BETWEEN '2014-05-19' AND  '2014-06-12' OR 
+                date_checked_in BETWEEN '".$start_date."' AND  '".$end_date."' OR 
                 -- OR wished booking date is before the DCO date
-                '2014-05-19' BETWEEN date_checked_in AND date_checked_out
+                '".$start_date."' BETWEEN date_checked_in AND date_checked_out
             ));";
 
+echo $sql;
 $result = mysqli_query($conn, $sql);
 $available_rooms = [];
 

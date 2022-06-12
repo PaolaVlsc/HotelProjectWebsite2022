@@ -27,9 +27,9 @@ require_once 'availableRooms.php';
 <!-- HEADER end -->
 
 
-<!-- rooms -->
 
-<section class="rooms sec-width" id="rooms">
+<!-- rooms -->
+<section id="rooms-section" class="rooms sec-width" id="rooms">
     <div class="title">
         <h2>E L I T E</h2>
     </div>
@@ -186,11 +186,28 @@ require_once 'availableRooms.php';
             echo "<h1>No available rooms given date</h1>"
     ?>
 </section>
-
 <!-- end rooms -->
+
+<!-- Form -->
+<div class = "book">
+    <form class = "book-form" method="POST" action="availableRooms.php">
+        <div class = "form-item">
+            <label for = "checkin-date">Check In Date: </label>
+            <input type = "date" id = "checkin-date" name="checkin-date">
+        </div>
+        <div class = "form-item">
+            <label for = "checkout-date">Check Out Date: </label>
+            <input type = "date" id = "checkout-date" name="checkout-date">
+        </div>
+        <div class = "form-item">
+            <input type = "submit" class = "btn" name="formDate" value = "Book Now">
+        </div>
+    </form>
+</div>
+<!-- End of form -->
+
 <!-- TODO 5. Reviews -->
 <!-- reviews section starts  -->
-
 <section class="reviews">
 
     <h1 class="heading-title"> clients reviews </h1>
@@ -293,8 +310,8 @@ require_once 'availableRooms.php';
 
 </section>
 <!-- Reviews end -->
-<!-- TODO 4. Footer start -->
 
+<!-- TODO 4. Footer start -->
 <section class="footer">
 
     <div class="box-container">
@@ -326,7 +343,6 @@ require_once 'availableRooms.php';
     </div>
 
 </section>
-
 <!-- Footer end -->
 
 
@@ -338,7 +354,9 @@ require_once 'availableRooms.php';
 <!-- enable jquery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 <script>$(document).ready(function () {
+        $('#rooms-section').hide();
         $('#single').show();
         $('#single_hide').hide();
         $('#double_room').show();
@@ -347,7 +365,5 @@ require_once 'availableRooms.php';
         $('#deluxe_room_hide').hide();
     });</script>
 <script src="js/script.js"></script>
-
-
 </body>
 </html>
