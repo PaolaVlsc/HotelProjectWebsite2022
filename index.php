@@ -121,11 +121,11 @@
 <section class="map">
     <div class="content">
         <h3>Πού βρισκόμαστε;</h3>
-        <p>Το ξενοδοχείο "ELITE" βρίσκεται στα... </p>
+        <p>Το ξενοδοχείο "ELITE" βρίσκεται στο κέντρο της της Αθήνας, μόλις 800μ. από το μετρό, αλλά και από την Ακρόπολη. </p>
     </div>
 
     <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.9098616766546!2d23.672607273707733!3d38.002562905129714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a13ba48d426f81%3A0xbe82f5519cbcb53d!2zzqDOsc69zrXPgM65z4PPhM6uzrzOuc6_IM6Uz4XPhM65zrrOrs-CIM6Rz4TPhM65zrrOrs-C!5e0!3m2!1sel!2sgr!4v1653899011484!5m2!1sel!2sgr"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1572.5715483189047!2d23.73085935822413!3d37.973789709296646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd3d94a023a7%3A0x3f7f63839babd06!2sNavarchou%20Nikodimou%2018-20%2C%20Athina%20105%2057!5e0!3m2!1sen!2sgr!4v1655136740309!5m2!1sen!2sgr"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -141,10 +141,17 @@
     </div>
 
     <div class="content">
-        <h3>Λίγα λόγια για το "ELITE"</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita et, recusandae nobis fugit modi quibusdam
-            ea assumenda, nulla quisquam repellat rem aliquid sequi maxime sapiente autem ipsum? Nobis, provident
-            voluptate?</p>
+        <h3>Επισκέπτεστε την Αθήνα για διακοπές ή δουλειά;</h3>
+        <p style="font-size: 19px; text-align: justify;
+  text-justify: inter-word;">
+            Αναζητάτε μερικές στιγμές ηρεμίας και χαλάρωσης ή θέλετε να γυρίσετε όλα τα ιστορικά σημεία της πόλης;
+            Εάν ναι, μπορείτε να είστε σίγουροι ότι το Elite Hotel θα γίνει το αγαπημένο σας ξενοδοχείο!
+            Βρίσκεται στο κέντρο της της Αθήνας, μόλις 800μ. από το μετρό, αλλά και από την Ακρόπολη.
+            Φτάνοντας στην ρεσεψιόν συναντάτε τη χαμογελαστή και φιλική διάθεση των υπαλλήλων που σας εξυπηρετούν. Μονόκλινο, δίκλινο ή σουίτα, με θέα στη
+            ακρόπολη ή στην πισίνα, το δωμάτιό σας διαθέτει μοντέρνα διακόσμηση, μινιμάλ επίπλωση και όλα τα απαραίτητα για μια άνετη διαμονή.
+            Διατίθεται δωρεάν πρωινό στον χώρο του breakfast, ο οποίος βρίσκεται στο Roof Garden με θέα την υπέροχη Αθήνα. Όταν ο καιρός το επιτρέπει η απόλαυση του καφέ
+            ή του ποτού μεταφέρεται έξω, στην πισίνα όπου μπορείτε να χαλαρώσετε στις αναπαυστικές μας ξαπλώστρες ή να δροσιστείτε κάνοντας μια βουτία.
+            Καλωσήρθατε στο Elite Hotel, κλείστε τώρα την διαμονή σας στον ξενοδοχείο μας και ζήστε μια μοναδική εμπειρία φιλοξενείας</p>
         <!--<a href="about.php" class="btn">read more</a> -->
     </div>
 </section>

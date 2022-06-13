@@ -99,7 +99,7 @@
         <!-- single room -->
         <article class="room" style="min-height: 50vh">
             <div class="room-image">
-                <img src="images/img3.jpg" alt="room image">
+                <img src="images/suite.jpg" alt="room image">
             </div>
             <div class="room-text">
                 <h3>Premium Δίκλινο Δωμάτιο</h3>
