@@ -23,7 +23,7 @@
 <?php include '../header.php'; ?>
 <!-- HEADER end -->
 <?php
-require_once 'type1.php';
+require_once 'reservationReqClient.php';
 ?>
 
 <div class="contact-section">

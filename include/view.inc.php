@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET["viewid"]))
 {
-    echo "it works";
+    //echo "it works";
     // grab data from the post
     $id=$_GET['viewid'];
 
