@@ -14,11 +14,11 @@ function validateDate() {
 
     if(today > startDate)
     {
-        alert("currentDate is greater than startDate");
+        alert("Παρακαλώ επιλέξτε έγκυρη ημερομηνία άφιξης ");
         return false;
     }
     if (startDate > endDate) {
-        alert("startDate is greater than endDate");
+        alert("Παρακαλώ ελέγξετε την ημερομηνία αποχώρησης");
         return false;
     }
 }

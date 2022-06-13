@@ -26,19 +26,19 @@
 
 <?php
 if (isset($_POST['formDate'])) {
-    echo "OKAY";
+    //echo "OKAY";
     $start_date = date('Y-m-d', strtotime($_POST['checkin-date']));
     $end_date = date('Y-m-d', strtotime($_POST['checkout-date']));
 
-    echo $start_date;
-    echo $end_date;
+   // echo $start_date;
+    // echo $end_date;
 }
 ?>
 
 <!-- TODO 6. Form -->
 <!-- Form -->
 <div class="book">
-    <form name="book" class="book-form"  action="" onsubmit="return validateDate()" method="POST">
+    <form name="book" class="book-form" action="" onsubmit="return validateDate()" method="POST">
         <div class="form-item">
             <label for="checkin-date">Check In Date: </label>
             <input type="date" id="checkin-date" name="checkin-date">
@@ -55,8 +55,8 @@ if (isset($_POST['formDate'])) {
 
 <?php
 if (isset($_POST['formDate'])) {
-    echo $start_date;
-    echo $end_date;
+    //echo $start_date;
+   // echo $end_date;
 
 
     include_once 'include/dbh.inc.php';
@@ -85,7 +85,7 @@ FROM
         while ($row = mysqli_fetch_assoc($result)) {
             $type = $row['roomtype'];
 
-            echo "  <td>" . $type . "</td>";
+           // echo "  <td>" . $type . "</td>";
             $available_rooms[] = $type;
         }
     }
@@ -126,11 +126,23 @@ if (isset($_POST['formDate'])) {
     <!-- Standard Μονόκλινο Δωμάτιο room start-->
     <?php
     if ($single === true) {
-        echo "SINGLE YES";
+       // echo "SINGLE YES";
         echo "<article id=\"single\" class=\"room\" style=\"min-height: 50vh\">";
     } else {
-        echo "SINGLE NO";
-        echo "<article id='single_hide' class=\"room\" style=\"min-height: 50vh\">";
+    ?>
+
+    <div class="alert" style="background-color: rgb(242,222,222)">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <h2>
+
+            <?php echo "<h1 style='text-transform: none; color: #d22121'>Δεν υπάρχει Standard Μονόκλινο Δωμάτιο διαθέσιμο στις ημερομηνίες που επιλέξατε</h1>";
+            ?>
+
+        </h2>
+    </div>
+
+    <?php
+    echo "<article id='single_hide' class=\"room\" style=\"min-height: 50vh\">";
     }
     ?>
     <div class="room-image">
@@ -158,139 +170,148 @@ if (isset($_POST['formDate'])) {
         <p class="rate">
             <span>45.00€/</span> διανυκτέρευση
         </p>
-        <form id="reservation_form" action="include/reservation_form.php" method="POST">
-            <input type="hidden" name="room" id="room">
-            <button id="buttonSingle" name="buttonSingle" type="submit" class="btn">ΚΡΑΤΗΣΗ</button>
-        </form>
-
-
         <form method="post" action="include/type2.php">
 
             <input type="hidden" name="start_date" value="<?php if (isset($_POST['formDate'])) {
                 echo $start_date;
             } ?>">
 
-            <input type="hidden" name="end_date" value="<?php if (isset($_POST['formDate'])) {
-                echo $end_date;
-            } ?>">
-            <input type="hidden" name="first_name" value="Single">
-            <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
-        </form>
+    <input type="hidden" name="end_date" value="<?php if (isset($_POST['formDate'])) {
+        echo $end_date;
+    } ?>">
+    <input type="hidden" name="first_name" value="Single">
+    <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
+    </form>
 
 
-    </div>
-    </article>
-    <!-- end of single room -->
+</div>
+</article>
+<!-- end of single room -->
 
-    <!-- Double room -->
-    <?php
-    if ($double_room === true) {
-        echo "double room yes";
-        echo "<article id=\"double_room\" class=\"room\" style=\"min-height: 50vh\">";
-    } else {
-        echo "double room no";
-        echo "<article id='double_room_hide' class=\"room\" style=\"min-height: 50vh\">";
-    }
+<!-- Double room -->
+<?php
+if ($double_room === true) {
+    //echo "double room yes";
+    echo "<article id=\"double_room\" class=\"room\" style=\"min-height: 50vh\">";
+} else {
     ?>
-    <div class="room-image">
-        <img src="images/img2.jpg" alt="room image">
-    </div>
-    <div class="room-text">
-        <h3>Standard Δίκλινο Δωμάτιο </h3>
-        <ul>
-            <li>
-                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
-            </li>
-            <li>
-                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
-            </li>
-            <li>
-                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                <i class="fa-solid fa-shower"></i>
-                <i class="fa-solid fa-snowflake"></i>
-                <i class="fa-solid fa-wifi"></i>
-                <i class="fa-solid fa-toilet"></i>
-                <i class="fa-solid fa-wheelchair"></i>
-                <i class="fa fa-phone"></i>
-                <i class="fa-solid fa-tv"></i>
-                <i class="fa-solid fa-couch"></i>
-            </li>
-        </ul>
-        <p class="rate">
-            <span>60.00€/</span> διανυκτέρευση
-        </p>
-        <form method="post" action="include/type2.php">
-            <input type="hidden" name="start_date" value="<?php if (isset($_POST['formDate'])) {
-                echo $start_date;
-            } ?>">
 
-            <input type="hidden" name="end_date" value="<?php if (isset($_POST['formDate'])) {
-                echo $end_date;
-            } ?>">
-            <input type="hidden" name="first_name" value="Deluxe">
-            <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
-        </form>
-    </div>
-    </article>
-    <!-- end of double room -->
+    <div class="alert" style="background-color: rgb(242,222,222)">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <h2>
 
-    <!-- Deluxe room -->
+            <?php echo "<h1 style='text-transform: none; color: #d22121'>Δεν υπάρχει Standard Δίκλινο  Δωμάτιο διαθέσιμο στις ημερομηνίες που επιλέξατε</h1>";
+            ?>
+
+        </h2>
+    </div>
+
     <?php
-    if ($deluxe === true) {
-        echo "Deluxe room yes";
-        echo "<article id=\"deluxe_room\" class=\"room\" style=\"min-height: 50vh\">";
-    } else {
-        echo "deluxe room no";
-        echo "<article id='deluxe_room_hide' class=\"room\" style=\"min-height: 50vh\">";
-    } ?>
-    <div class="room-image">
-        <img src="images/img3.jpg" alt="room image">
-    </div>
-    <div class="room-text">
-        <h3>Premium Δίκλινο Δωμάτιο</h3>
-        <ul>
-            <li>
-                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
-            </li>
-            <li>
-                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
-            </li>
-            <li>
-                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                <i class="fa-solid fa-shower"></i>
-                <i class="fa-solid fa-snowflake"></i>
-                <i class="fa-solid fa-wifi"></i>
-                <i class="fa-solid fa-toilet"></i>
-                <i class="fa-solid fa-wheelchair"></i>
-                <i class="fa fa-phone"></i>
-                <i class="fa-solid fa-tv"></i>
-                <i class="fa-solid fa-couch"></i>
-                <i class="fa-solid fa-computer"></i>
-                <i class="fa-solid fa-person-swimming"></i>
-                <i class="fa-solid fa-utensils"></i>
-            </li>
-        </ul>
-        <p class="rate">
-            <span>114.00€ /</span> διανυκτέρευση
-        </p>
-        <form method="post" action="include/type2.php">
-            <input type="hidden" name="start_date" value="<?php if (isset($_POST['formDate'])) {
-                echo $start_date;
-            } ?>">
+    echo "<article id='double_room_hide' class=\"room\" style=\"min-height: 50vh\">";
+}
+?>
 
-            <input type="hidden" name="end_date" value="<?php if (isset($_POST['formDate'])) {
-                echo $end_date;
-            } ?>">
-            <input type="hidden" name="first_name" value="Superior">
-            <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
-        </form>
-    </div>
-    </article>
-    <!-- end of deluxe room -->
+
+
+<div class="room-image">
+    <img src="images/img2.jpg" alt="room image">
+</div>
+<div class="room-text">
+    <h3>Standard Δίκλινο Δωμάτιο </h3>
+    <ul>
+        <li>
+            <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+            <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
+        </li>
+        <li>
+            <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+            <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
+        </li>
+        <li>
+            <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+            <i class="fa-solid fa-shower"></i>
+            <i class="fa-solid fa-snowflake"></i>
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-toilet"></i>
+            <i class="fa-solid fa-wheelchair"></i>
+            <i class="fa fa-phone"></i>
+            <i class="fa-solid fa-tv"></i>
+            <i class="fa-solid fa-couch"></i>
+        </li>
+    </ul>
+    <p class="rate">
+        <span>60.00€/</span> διανυκτέρευση
+    </p>
+    <form method="post" action="include/type2.php">
+        <input type="hidden" name="start_date" value="<?php if (isset($_POST['formDate'])) {
+            echo $start_date;
+        } ?>">
+
+        <input type="hidden" name="end_date" value="<?php if (isset($_POST['formDate'])) {
+            echo $end_date;
+        } ?>">
+        <input type="hidden" name="first_name" value="Deluxe">
+        <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
+    </form>
+</div>
+</article>
+<!-- end of double room -->
+
+<!-- Deluxe room -->
+<?php
+if ($deluxe === true) {
+    //echo "Deluxe room yes";
+    echo "<article id=\"deluxe_room\" class=\"room\" style=\"min-height: 50vh\">";
+} else {
+    echo "deluxe room no";
+    echo "<article id='deluxe_room_hide' class=\"room\" style=\"min-height: 50vh\">";
+} ?>
+<div class="room-image">
+    <img src="images/img3.jpg" alt="room image">
+</div>
+<div class="room-text">
+    <h3>Premium Δίκλινο Δωμάτιο</h3>
+    <ul>
+        <li>
+            <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+            <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
+        </li>
+        <li>
+            <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+            <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
+        </li>
+        <li>
+            <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+            <i class="fa-solid fa-shower"></i>
+            <i class="fa-solid fa-snowflake"></i>
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-toilet"></i>
+            <i class="fa-solid fa-wheelchair"></i>
+            <i class="fa fa-phone"></i>
+            <i class="fa-solid fa-tv"></i>
+            <i class="fa-solid fa-couch"></i>
+            <i class="fa-solid fa-computer"></i>
+            <i class="fa-solid fa-person-swimming"></i>
+            <i class="fa-solid fa-utensils"></i>
+        </li>
+    </ul>
+    <p class="rate">
+        <span>114.00€ /</span> διανυκτέρευση
+    </p>
+    <form method="post" action="include/type2.php">
+        <input type="hidden" name="start_date" value="<?php if (isset($_POST['formDate'])) {
+            echo $start_date;
+        } ?>">
+
+        <input type="hidden" name="end_date" value="<?php if (isset($_POST['formDate'])) {
+            echo $end_date;
+        } ?>">
+        <input type="hidden" name="first_name" value="Superior">
+        <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
+    </form>
+</div>
+</article>
+<!-- end of deluxe room -->
 </div>
 
 <?php
