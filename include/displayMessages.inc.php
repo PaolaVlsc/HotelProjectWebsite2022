@@ -50,12 +50,12 @@ if (!isset($_SESSION['username'])) {
                         $phone = $row['phone'];
                         $message = $row['message'];
 
-                        echo "  <td>" . $id . "</td>
+                        echo "  <tr><td>" . $id . "</td>
                               <td>" . $name . "</td>
                               <td>" . $surname . "</td>
                               <td>" . $email . "</td>
                               <td>" . $phone . "</td>
-                              <td><button  class='btn'><a href=\"include/view.inc.php?viewid=" . $id . "\" >View</a></button></td>  ";
+                              <td><button  class='btn'><a href=\"include/view.inc.php?viewid=" . $id . "\" >View</a></button></td>  </tr>";
 
                     }
                 }
