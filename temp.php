@@ -112,169 +112,175 @@ FROM
 <?php
 if (isset($_POST['formDate'])) {
     echo "<section id=\"rooms_ok\" class=\"rooms sec-width\">";
-}
-else
-{
+} else {
     echo "<section id=\"rooms_ok_hide\" class=\"rooms sec-width\" >";
 }
 ?>
 <!-- rooms -->
-    <div class="title">
-        <h2>E L I T E</h2>
-    </div>
-    <div class="rooms-container">
-        <!-- Standard Μονόκλινο Δωμάτιο room start-->
-        <?php
-        if ($single === true) {
-            echo "SINGLE YES";
-            echo "<article id=\"single\" class=\"room\" style=\"min-height: 50vh\">";
-        } else {
-            echo "SINGLE NO";
-            echo "<article id='single_hide' class=\"room\" style=\"min-height: 50vh\">";
-        }
-        ?>
-        <div class="room-image">
-            <img src="images/img3.jpg" alt="room image">
-        </div>
-        <div class="room-text">
-            <h3>Standard Μονόκλινο Δωμάτιο</h3>
-            <ul>
-                <li>
-                    <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                    <i class="fa-solid fa-person"></i> Max
-                </li>
-                <li>
-                    <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                    <i class="fa-solid fa-bed"></i> | 1 μονό κρεβάτι
-                </li>
-                <li>
-                    <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                    <i class="fa-solid fa-shower sub"></i><i class="fa-solid fa-snowflake"></i><i
-                            class="fa-solid fa-wifi"></i><i class="fa-solid fa-toilet"></i>
-                    <i class="fa-solid fa-wheelchair"></i><i class="fa fa-phone"></i>
-                </li>
-
-            </ul>
-            <p class="rate">
-                <span>45.00€/</span> διανυκτέρευση
-            </p>
-            <form id="reservation_form" action="include/reservation_form.php" method="POST">
-                <input type="hidden" name="room" id="room">
-                <button id="buttonSingle" name="buttonSingle" type="submit" class="btn">ΚΡΑΤΗΣΗ</button>
-            </form>
-
-
-            <form method="post" action="include/typeAvailableRooms.php">
-                <input type="hidden" name="first_name" value="Single">
-                <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
-            </form>
-
-
-        </div>
-        </article>
-        <!-- end of single room -->
-
-        <!-- Double room -->
-        <?php
-        if ($double_room === true) {
-            echo "double room yes";
-            echo "<article id=\"double_room\" class=\"room\" style=\"min-height: 50vh\">";
-        } else {
-            echo "double room no";
-            echo "<article id='double_room_hide' class=\"room\" style=\"min-height: 50vh\">";
-        }
-        ?>
-        <div class="room-image">
-            <img src="images/img2.jpg" alt="room image">
-        </div>
-        <div class="room-text">
-            <h3>Standard Δίκλινο Δωμάτιο </h3>
-            <ul>
-                <li>
-                    <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                    <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
-                </li>
-                <li>
-                    <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                    <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
-                </li>
-                <li>
-                    <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                    <i class="fa-solid fa-shower"></i>
-                    <i class="fa-solid fa-snowflake"></i>
-                    <i class="fa-solid fa-wifi"></i>
-                    <i class="fa-solid fa-toilet"></i>
-                    <i class="fa-solid fa-wheelchair"></i>
-                    <i class="fa fa-phone"></i>
-                    <i class="fa-solid fa-tv"></i>
-                    <i class="fa-solid fa-couch"></i>
-                </li>
-            </ul>
-            <p class="rate">
-                <span>60.00€/</span> διανυκτέρευση
-            </p>
-            <form method="post" action="include/typeAvailableRooms.php">
-                <input type="hidden" name="first_name" value="Deluxe">
-                <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
-            </form>
-        </div>
-        </article>
-        <!-- end of double room -->
-
-        <!-- Deluxe room -->
-        <?php
-        if ($deluxe === true) {
-            echo "Deluxe room yes";
-            echo "<article id=\"deluxe_room\" class=\"room\" style=\"min-height: 50vh\">";
-        } else {
-            echo "deluxe room no";
-            echo "<article id='deluxe_room_hide' class=\"room\" style=\"min-height: 50vh\">";
-        } ?>
-        <div class="room-image">
-            <img src="images/img3.jpg" alt="room image">
-        </div>
-        <div class="room-text">
-            <h3>Premium Δίκλινο Δωμάτιο</h3>
-            <ul>
-                <li>
-                    <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                    <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
-                </li>
-                <li>
-                    <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                    <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
-                </li>
-                <li>
-                    <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
-                    <i class="fa-solid fa-shower"></i>
-                    <i class="fa-solid fa-snowflake"></i>
-                    <i class="fa-solid fa-wifi"></i>
-                    <i class="fa-solid fa-toilet"></i>
-                    <i class="fa-solid fa-wheelchair"></i>
-                    <i class="fa fa-phone"></i>
-                    <i class="fa-solid fa-tv"></i>
-                    <i class="fa-solid fa-couch"></i>
-                    <i class="fa-solid fa-computer"></i>
-                    <i class="fa-solid fa-person-swimming"></i>
-                    <i class="fa-solid fa-utensils"></i>
-                </li>
-            </ul>
-            <p class="rate">
-                <span>114.00€ /</span> διανυκτέρευση
-            </p>
-            <form method="post" action="include/typeAvailableRooms.php">
-                <input type="hidden" name="first_name" value="Superior">
-                <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
-            </form>
-        </div>
-        </article>
-        <!-- end of deluxe room -->
-    </div>
-
+<div class="title">
+    <h2>E L I T E</h2>
+</div>
+<div class="rooms-container">
+    <!-- Standard Μονόκλινο Δωμάτιο room start-->
     <?php
-    if (($single === false) && ($double_room === false) && ($deluxe === false))
-        echo "<h1>No available rooms given date</h1>"
+    if ($single === true) {
+        echo "SINGLE YES";
+        echo "<article id=\"single\" class=\"room\" style=\"min-height: 50vh\">";
+    } else {
+        echo "SINGLE NO";
+        echo "<article id='single_hide' class=\"room\" style=\"min-height: 50vh\">";
+    }
     ?>
+    <div class="room-image">
+        <img src="images/img3.jpg" alt="room image">
+    </div>
+    <div class="room-text">
+        <h3>Standard Μονόκλινο Δωμάτιο</h3>
+        <ul>
+            <li>
+                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                <i class="fa-solid fa-person"></i> Max
+            </li>
+            <li>
+                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                <i class="fa-solid fa-bed"></i> | 1 μονό κρεβάτι
+            </li>
+            <li>
+                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                <i class="fa-solid fa-shower sub"></i><i class="fa-solid fa-snowflake"></i><i
+                        class="fa-solid fa-wifi"></i><i class="fa-solid fa-toilet"></i>
+                <i class="fa-solid fa-wheelchair"></i><i class="fa fa-phone"></i>
+            </li>
+
+        </ul>
+        <p class="rate">
+            <span>45.00€/</span> διανυκτέρευση
+        </p>
+        <form id="reservation_form" action="include/reservation_form.php" method="POST">
+            <input type="hidden" name="room" id="room">
+            <button id="buttonSingle" name="buttonSingle" type="submit" class="btn">ΚΡΑΤΗΣΗ</button>
+        </form>
+
+
+        <form method="post" action="include/type1.php">
+
+            <input type="hidden" name="start_date" value="<?php if (isset($_POST['formDate'])) {
+                echo $start_date;
+            } ?>">
+
+            <input type="hidden" name="end_date" value="<?php if (isset($_POST['formDate'])) {
+                echo $end_date;
+            } ?>">
+            <input type="hidden" name="first_name" value="Single">
+            <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
+        </form>
+
+
+    </div>
+    </article>
+    <!-- end of single room -->
+
+    <!-- Double room -->
+    <?php
+    if ($double_room === true) {
+        echo "double room yes";
+        echo "<article id=\"double_room\" class=\"room\" style=\"min-height: 50vh\">";
+    } else {
+        echo "double room no";
+        echo "<article id='double_room_hide' class=\"room\" style=\"min-height: 50vh\">";
+    }
+    ?>
+    <div class="room-image">
+        <img src="images/img2.jpg" alt="room image">
+    </div>
+    <div class="room-text">
+        <h3>Standard Δίκλινο Δωμάτιο </h3>
+        <ul>
+            <li>
+                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
+            </li>
+            <li>
+                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
+            </li>
+            <li>
+                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                <i class="fa-solid fa-shower"></i>
+                <i class="fa-solid fa-snowflake"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-toilet"></i>
+                <i class="fa-solid fa-wheelchair"></i>
+                <i class="fa fa-phone"></i>
+                <i class="fa-solid fa-tv"></i>
+                <i class="fa-solid fa-couch"></i>
+            </li>
+        </ul>
+        <p class="rate">
+            <span>60.00€/</span> διανυκτέρευση
+        </p>
+        <form method="post" action="include/typeAvailableRooms.php">
+            <input type="hidden" name="first_name" value="Deluxe">
+            <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
+        </form>
+    </div>
+    </article>
+    <!-- end of double room -->
+
+    <!-- Deluxe room -->
+    <?php
+    if ($deluxe === true) {
+        echo "Deluxe room yes";
+        echo "<article id=\"deluxe_room\" class=\"room\" style=\"min-height: 50vh\">";
+    } else {
+        echo "deluxe room no";
+        echo "<article id='deluxe_room_hide' class=\"room\" style=\"min-height: 50vh\">";
+    } ?>
+    <div class="room-image">
+        <img src="images/img3.jpg" alt="room image">
+    </div>
+    <div class="room-text">
+        <h3>Premium Δίκλινο Δωμάτιο</h3>
+        <ul>
+            <li>
+                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                <i class="fa-solid fa-person"></i><i class="fa-solid fa-person"></i> Max
+            </li>
+            <li>
+                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                <i class="fa-solid fa-bed"></i> | 1 Διπλό ή 2 Μονά Κρεβάτια
+            </li>
+            <li>
+                <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
+                <i class="fa-solid fa-shower"></i>
+                <i class="fa-solid fa-snowflake"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-toilet"></i>
+                <i class="fa-solid fa-wheelchair"></i>
+                <i class="fa fa-phone"></i>
+                <i class="fa-solid fa-tv"></i>
+                <i class="fa-solid fa-couch"></i>
+                <i class="fa-solid fa-computer"></i>
+                <i class="fa-solid fa-person-swimming"></i>
+                <i class="fa-solid fa-utensils"></i>
+            </li>
+        </ul>
+        <p class="rate">
+            <span>114.00€ /</span> διανυκτέρευση
+        </p>
+        <form method="post" action="include/typeAvailableRooms.php">
+            <input type="hidden" name="first_name" value="Superior">
+            <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
+        </form>
+    </div>
+    </article>
+    <!-- end of deluxe room -->
+</div>
+
+<?php
+if (($single === false) && ($double_room === false) && ($deluxe === false))
+    echo "<h1>No available rooms given date</h1>"
+?>
 </section>
 <!-- end rooms -->
 <!-- σύνδεση με τη javascript   -->
