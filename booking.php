@@ -206,13 +206,21 @@ require_once 'availableRooms.php';
 <!-- End of form -->
 
 
-<!-- php code of availableRooms -->
 
 
 
 
 
-<!-- end of php -->
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- TODO 5. Reviews -->

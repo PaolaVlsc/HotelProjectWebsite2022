@@ -27,7 +27,7 @@ $sql = "SELECT * from room where room_num not in ( SELECT
                 '2022-06-14' BETWEEN date_checked_in AND date_checked_out
             ));";
 
-echo $sql;
+//echo $sql;
 $result = mysqli_query($conn, $sql);
 $available_rooms = [];
 
