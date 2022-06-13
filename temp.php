@@ -221,7 +221,14 @@ if (isset($_POST['formDate'])) {
         <p class="rate">
             <span>60.00€/</span> διανυκτέρευση
         </p>
-        <form method="post" action="include/typeAvailableRooms.php">
+        <form method="post" action="include/type2.php">
+            <input type="hidden" name="start_date" value="<?php if (isset($_POST['formDate'])) {
+                echo $start_date;
+            } ?>">
+
+            <input type="hidden" name="end_date" value="<?php if (isset($_POST['formDate'])) {
+                echo $end_date;
+            } ?>">
             <input type="hidden" name="first_name" value="Deluxe">
             <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
         </form>
@@ -270,7 +277,14 @@ if (isset($_POST['formDate'])) {
         <p class="rate">
             <span>114.00€ /</span> διανυκτέρευση
         </p>
-        <form method="post" action="include/typeAvailableRooms.php">
+        <form method="post" action="include/type2.php">
+            <input type="hidden" name="start_date" value="<?php if (isset($_POST['formDate'])) {
+                echo $start_date;
+            } ?>">
+
+            <input type="hidden" name="end_date" value="<?php if (isset($_POST['formDate'])) {
+                echo $end_date;
+            } ?>">
             <input type="hidden" name="first_name" value="Superior">
             <input class="btn" type="submit" name="save" value="ΚΡΑΤΗΣΗ">
         </form>
