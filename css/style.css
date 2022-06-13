@@ -450,3 +450,7 @@ section { /* padding header */
 .closebtn:hover {
     color: black;
 }
+
+.footer a {
+    text-decoration: none;
+}

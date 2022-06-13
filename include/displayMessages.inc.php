@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
     echo "<h1>DENIED ACCESS</h1>";
     exit();
 } else {
-    echo "WELCOME";
+   // echo "WELCOME";
 }
 ?>
 <!DOCTYPE html>

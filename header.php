@@ -28,7 +28,7 @@ session_start();
                 <li>
                     <a href="contact.php" class="<?= ($activePage == 'contact') ? 'active' : ''; ?>">Επικοινωνία</a>
                 </li>
-                <li><a href="temp.php" class="<?= ($activePage == 'temp') ? 'active' : ''; ?>">Κράτηση</a></li>
+                <li><a href="booking.php" class="<?= ($activePage == 'booking') ? 'active' : ''; ?>">Κράτηση</a></li>
                 <li><a href="login.php" class="<?= ($activePage == 'login') ? 'active' : ''; ?>">Σύνδεση</a></li>
 
                 <?php

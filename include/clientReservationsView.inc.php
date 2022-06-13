@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
     echo "<h1>DENIED ACCESS</h1>";
     exit();
 } else {
-    echo "WELCOME";
+    //echo "WELCOME";
 }
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ if (!isset($_SESSION['username'])) {
 </head>
 
 <body>
-<div class="table-container" >
+<div class="table-container" style="margin-bottom: 100px;">
     <h1 class="heading">Ιστορικό Κρατήσεων</h1>
     <table class="table" >
         <thead>
