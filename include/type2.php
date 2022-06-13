@@ -56,6 +56,8 @@ if (isset($_POST['submit'])) {
         echo $sql;
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
+            $_SESSION['status'] = "Reservation Completed";
+            header("location: ../index.php");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

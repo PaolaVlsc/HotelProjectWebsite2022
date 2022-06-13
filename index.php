@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- σύνδεση με τη css   -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
+
 </head>
 <body>
 
@@ -59,9 +63,27 @@
 </section>
 
 <!--  HEADER pictures end -->
-
-
 <!--  TODO 4. services homepage start-->
+<section class="box">
+    <?php
+    if (isset($_SESSION['status'])) {
+        ?>
+
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <h2>
+                <?php echo $_SESSION['status']; ?>
+            </h2>
+        </div>
+        <?php
+        unset($_SESSION['status']);
+        unset($_SESSION['room']);
+        unset($_SESSION['startCheckIn']);
+        unset($_SESSION['startCheckOut']);
+    }
+    ?>
+</section>
+
 
 <section class="services">
 

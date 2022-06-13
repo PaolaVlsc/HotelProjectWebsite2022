@@ -15,7 +15,7 @@ session_start();
             <li>
                 <a href="rooms.php" class="<?= ($activePage == 'rooms') ? 'active':''; ?>" > Δωμάτια</a></li>
             <li>
-                <a href="booking.php" class="<?= ($activePage == 'booking') ? 'active':''; ?>" >Κράτηση</a></li>
+                <a href="temp.php" class="<?= ($activePage == 'booking') ? 'active':''; ?>" >Κράτηση</a></li>
             <li>
                 <a href="contact.php" class="<?= ($activePage == 'contact') ? 'active':''; ?>" >Επικοινωνία</a></li>
 
