@@ -38,7 +38,7 @@ if (isset($_POST['formDate'])) {
 <!-- TODO 6. Form -->
 <!-- Form -->
 <div class="book">
-    <form class="book-form" method="POST" action="">
+    <form name="book" class="book-form"  action="" onsubmit="return validateDate()" method="POST">
         <div class="form-item">
             <label for="checkin-date">Check In Date: </label>
             <input type="date" id="checkin-date" name="checkin-date">
@@ -316,6 +316,7 @@ if (($single === false) && ($double_room === false) && ($deluxe === false))
         $('#deluxe_room_hide').hide();
     });</script>
 <script src="js/script.js"></script>
+<script src="js/date.js"></script>
 
 </body>
 </html>
