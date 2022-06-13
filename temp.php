@@ -37,15 +37,15 @@ if (isset($_POST['formDate'])) {
 
 <!-- TODO 6. Form -->
 <!-- Form -->
-<div class="book">
+<div class="book" >
     <form name="book" class="book-form" action="" onsubmit="return validateDate()" method="POST">
         <div class="form-item">
             <label for="checkin-date">Check In Date: </label>
-            <input type="date" id="checkin-date" name="checkin-date">
+            <input type="date" id="checkin-date" name="checkin-date" style="text-transform: none;" >
         </div>
         <div class="form-item">
             <label for="checkout-date">Check Out Date: </label>
-            <input type="date" id="checkout-date" name="checkout-date">
+            <input type="date" id="checkout-date" name="checkout-date" style="text-transform: none;" >
         </div>
         <div class="form-item">
             <input type="submit" class="btn" name="formDate" value="Book Now">
@@ -267,7 +267,7 @@ if ($deluxe === true) {
     echo "<article id='deluxe_room_hide' class=\"room\" style=\"min-height: 50vh\">";
 } ?>
 <div class="room-image">
-    <img src="images/img3.jpg" alt="room image">
+    <img src="images/suite.jpg" alt="room image">
 </div>
 <div class="room-text">
     <h3>Premium Δίκλινο Δωμάτιο</h3>
