@@ -24,5 +24,5 @@ if(!isset($_SESSION['username']))
 }else
 {
     echo "WELCOME";
-    require_once 'displayMessages.inc.php';
+    require_once 'include/displayMessages.inc.php';
 } ?>
