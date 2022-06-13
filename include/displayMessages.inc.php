@@ -24,7 +24,7 @@ if (!isset($_SESSION['username'])) {
 
 <body>
 <div class="table-container">
-    <h1 class="heading">Responsive Table</h1>
+    <h1 class="heading">Μηνύματα</h1>
     <table class="table">
         <thead>
         <tr>
@@ -106,36 +106,4 @@ if (!isset($_SESSION['username'])) {
 <!--        </tr>-->
         </tbody>
     </table>
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h4 class="modal-title">
-                        Customer Detail
-                    </h4>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        ×
-                    </button>
-                </div>
-
-                <div id="modal-body">
-                    Press ESC button to exit.
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">
-                        OK
-                    </button>
-                </div>
-
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-
-    </div><!-- /.modal -->
 </div>

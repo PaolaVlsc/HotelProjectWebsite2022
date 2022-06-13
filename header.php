@@ -23,6 +23,7 @@ session_start();
                 if(isset($_SESSION["username"])){
 //                    $id = $_SESSION["username"];
 //                    echo "$id";
+                    echo "<li><a href=\"clientsReservations.php\" class=\"<?= ($activePage == 'login') ? 'active':''; ?>\" >Κρατήσεις</a></li>";
                     echo "<li><a href=\"requests.php\" class=\"<?= ($activePage == 'login') ? 'active':''; ?>\" >Αιτήματα</a></li>";
                     echo "<li> <a href=\"include/logout.inc.php\" class=\"<?= ($activePage == 'login') ? 'active':''; ?>\" >Αποσύνδεση</a></li>";
                 }
