@@ -162,7 +162,7 @@ if (isset($_POST['formDate'])) {
         </form>
 
 
-        <form method="post" action="include/type1.php">
+        <form method="post" action="include/type2.php">
 
             <input type="hidden" name="start_date" value="<?php if (isset($_POST['formDate'])) {
                 echo $start_date;
