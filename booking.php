@@ -27,7 +27,6 @@ require_once 'availableRooms.php';
 <!-- HEADER end -->
 
 
-
 <!-- rooms -->
 <section id="rooms-section" class="rooms sec-width" id="rooms">
     <div class="title">
@@ -206,6 +205,16 @@ require_once 'availableRooms.php';
 </div>
 <!-- End of form -->
 
+
+<!-- php code of availableRooms -->
+
+
+
+
+
+<!-- end of php -->
+
+
 <!-- TODO 5. Reviews -->
 <!-- reviews section starts  -->
 <section class="reviews">
@@ -356,7 +365,6 @@ require_once 'availableRooms.php';
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script>$(document).ready(function () {
-        $('#rooms-section').hide();
         $('#single').show();
         $('#single_hide').hide();
         $('#double_room').show();

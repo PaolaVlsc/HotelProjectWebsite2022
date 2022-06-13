@@ -1,18 +1,18 @@
 <?php
-include_once 'include/dbh.inc.php';
+include_once 'getDate.php';
 
 
-if(isset($_POST['formDate']))
-{
-    echo "OKAY";
-
-    $start_date = date('Y-m-d', strtotime($_POST['checkin-date']));
-    $end_date = date('Y-m-d', strtotime($_POST['checkout-date']));
-
-
-    echo $start_date;
-    echo $end_date;
-}
+//if(isset($_POST['formDate']))
+//{
+//    echo "OKAY";
+//
+//    $start_date = date('Y-m-d', strtotime($_POST['checkin-date']));
+//    $end_date = date('Y-m-d', strtotime($_POST['checkout-date']));
+//
+//
+//    echo $start_date;
+//    echo $end_date;
+//}
 
 $sql = "SELECT * from room where room_num not in ( SELECT
             room.room_num
@@ -22,9 +22,9 @@ $sql = "SELECT * from room where room_num not in ( SELECT
             reservation ON reservation.room_num = room.room_num
         WHERE (
                 -- wished booking date is after or at the DOR date
-                date_checked_in BETWEEN '".$start_date."' AND  '".$end_date."' OR 
+                date_checked_in BETWEEN '2022-06-14' AND  '2022-06-18' OR 
                 -- OR wished booking date is before the DCO date
-                '".$start_date."' BETWEEN date_checked_in AND date_checked_out
+                '2022-06-14' BETWEEN date_checked_in AND date_checked_out
             ));";
 
 echo $sql;
