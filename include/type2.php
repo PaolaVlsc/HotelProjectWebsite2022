@@ -47,9 +47,12 @@ if (isset($_POST['submit'])) {
         $checkInDate = $_SESSION['startCheckIn'];
         $checkOutDate = $_SESSION['startCheckOut'];
 
-        echo $_POST['name'];
+        $name =  $_POST['name'];
+        $surname =  $_POST['surname'];
+        $email =  $_POST['email'];
+        $phone =  $_POST['phone'];
 
-        $sql = "INSERT INTO reservation (room_num, date_checked_in, date_checked_out) VALUES ($roomNumber, '".$checkInDate."', '".$checkOutDate."');";
+        $sql = "INSERT INTO reservation (room_num, date_checked_in, date_checked_out, name, surname, email, phone) VALUES ($roomNumber, '".$checkInDate."', '".$checkOutDate."', '".$name."', '".$surname."', '".$email."', '".$phone."');";
         echo $sql;
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
