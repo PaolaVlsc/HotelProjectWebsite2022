@@ -49,15 +49,15 @@
                     <li>
                         <i class="fas fa-arrow-alt-circle-right" style="color: var(--yellow)"></i>
                         <i class="fa-solid fa-shower sub"></i><i class="fa-solid fa-snowflake"></i><i
-                            class="fa-solid fa-wifi"></i><i class="fa-solid fa-toilet"></i>
+                                class="fa-solid fa-wifi"></i><i class="fa-solid fa-toilet"></i>
                         <i class="fa-solid fa-wheelchair"></i><i class="fa fa-phone"></i>
                     </li>
 
                 </ul>
-                <p class="rate">
+                <p class="rate" style="padding-top: 60px;">
                     <span>45.00€/</span> διανυκτέρευση
                 </p>
-                <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>
+                <!--                <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>-->
             </div>
         </article>
         <!-- end of single room -->
@@ -89,10 +89,10 @@
                         <i class="fa-solid fa-couch"></i>
                     </li>
                 </ul>
-                <p class="rate">
+                <p class="rate" style="padding-top: 60px;">
                     <span>60.00€/</span> διανυκτέρευση
                 </p>
-                <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>
+                <!--                <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>-->
             </div>
         </article>
         <!-- end of single room -->
@@ -127,10 +127,10 @@
                         <i class="fa-solid fa-utensils"></i>
                     </li>
                 </ul>
-                <p class="rate">
+                <p class="rate" style="padding-top: 60px;">
                     <span>114.00€ /</span> διανυκτέρευση
                 </p>
-                <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>
+                <!--                <button type="button" class="btn">ΚΡΑΤΗΣΗ</button>-->
             </div>
         </article>
         <!-- end of single room -->
@@ -167,7 +167,8 @@
 
     </div>
 
-    <div class="credit" ><span style="text-transform: none;"> created by UniWA |  ΠΑΝΑΓΗΣ ΝΙΚΟΛΑΟΣ cs161142  | ΒΕΛΑΣΚΟ ΠΑΟΛΑ cs161020 </span></div>
+    <div class="credit"><span style="text-transform: none;"> created by UniWA |  ΠΑΝΑΓΗΣ ΝΙΚΟΛΑΟΣ cs161142  | ΒΕΛΑΣΚΟ ΠΑΟΛΑ cs161020 </span>
+    </div>
 
 </section>
 
