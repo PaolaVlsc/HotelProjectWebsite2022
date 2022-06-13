@@ -29,14 +29,17 @@ require_once 'reservationReqClient.php';
 <div class="contact-section">
     <h1>Στοιχεία κράτησης</h1>
     <div class="border"></div>
-    <form class="contact-form" action="" method="POST" name="insert">
-        <input type="text" class="contact-form-text" placeholder="'Ονομα" name="name" id="name" required>
-        <input type="text" class="contact-form-text" placeholder="Επώνυμο" name="surname" id="surname" required>
-        <input type="email" class="contact-form-text" placeholder="E-mail" name="email">
-        <input type="text" class="contact-form-text" placeholder="Phone" name="phone" required>
-        <input type="submit" class="contact-form-btn" name="submit" value="Αποστολή">
-        <span></span>
-    </form>
+    <div class="contact-form">
+        <form class="contact-form" action="" method="POST" name="insert">
+            <input type="text" class="contact-form-text" placeholder="'Ονομα" name="name" id="name" required>
+            <input type="text" class="contact-form-text" placeholder="Επώνυμο" name="surname" id="surname" required>
+            <input type="email" class="contact-form-text" placeholder="E-mail" name="email">
+            <input type="text" class="contact-form-text" placeholder="Phone" name="phone" required>
+            <input type="submit" class="contact-form-btn" name="submit" value="Αποστολή">
+            <span></span>
+        </form>
+        <button onclick="location.href = '../index.php';" id="myButton" class="contact-form-btn" style="margin-top: 10px;margin-right: 10px;">Ακύρωση</button>
+    </div>
 </div>
 
 <?php
@@ -47,16 +50,16 @@ if (isset($_POST['submit'])) {
         $checkInDate = $_SESSION['startCheckIn'];
         $checkOutDate = $_SESSION['startCheckOut'];
 
-        $name =  $_POST['name'];
-        $surname =  $_POST['surname'];
-        $email =  $_POST['email'];
-        $phone =  $_POST['phone'];
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
 
-        $sql = "INSERT INTO reservation (room_num, date_checked_in, date_checked_out, name, surname, email, phone) VALUES ($roomNumber, '".$checkInDate."', '".$checkOutDate."', '".$name."', '".$surname."', '".$email."', '".$phone."');";
-        echo $sql;
+        $sql = "INSERT INTO reservation (room_num, date_checked_in, date_checked_out, name, surname, email, phone) VALUES ($roomNumber, '" . $checkInDate . "', '" . $checkOutDate . "', '" . $name . "', '" . $surname . "', '" . $email . "', '" . $phone . "');";
+        //echo $sql;
         if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
-            $_SESSION['status'] = "Reservation Completed";
+            // echo "New record created successfully";
+            $_SESSION['status'] = "Επιτυχής ολοκλήρωση κράτησης";
             header("location: ../index.php");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;

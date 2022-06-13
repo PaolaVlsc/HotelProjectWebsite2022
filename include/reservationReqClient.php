@@ -6,13 +6,13 @@ $room = null;
 if(isset($_POST['save']))
 {
     $room = htmlspecialchars($_POST['first_name']);
-    echo $room;
+    //echo $room;
 
     $start_date = htmlspecialchars($_POST['start_date']);
-    echo $start_date;
+    //echo $start_date;
 
     $end_date = htmlspecialchars($_POST['end_date']);
-    echo $end_date;
+    //echo $end_date;
 
 
     $sql = "SELECT * from room where room_num not in ( SELECT
@@ -28,7 +28,7 @@ if(isset($_POST['save']))
                 '".$start_date."' BETWEEN date_checked_in AND date_checked_out
             )); ";
 
-    echo $sql;
+    //echo $sql;
 
     $result = mysqli_query($conn, $sql);
 
@@ -36,7 +36,7 @@ if(isset($_POST['save']))
 
         $row = mysqli_fetch_assoc($result);
         $type = $row['room_num'];
-        echo $type;
+        //echo $type;
 
         $_SESSION['roomNumber'] = $type;
         $_SESSION['startCheckIn'] = $start_date;
