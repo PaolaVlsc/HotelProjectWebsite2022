@@ -72,6 +72,6 @@ INSERT INTO room (room_num, roomtype) VALUES (116, 'Deluxe');
 INSERT INTO room (room_num, roomtype) VALUES (121, 'Superior');
 INSERT INTO room (room_num, roomtype) VALUES (122, 'Superior');
 
-INSERT INTO reservation  VALUES (1, 102, '2014-05-29', '2014-05-31', 'Paola', 'Velasco','cs161020@uniwa.gr','69300000');
-INSERT INTO reservation VALUES (2, 114, '2014-06-01', '2014-06-06', 'Nikos', 'Panagis','cs161142@uniwa.gr','69300005');
-INSERT INTO reservation VALUES (3, 116, '2014-06-08', '2014-06-11', 'Maria', 'Velasco','cs161022@uniwa.gr','69300006');
+INSERT INTO reservation  VALUES (1, 102, '2022-05-29', '2014-05-31', 'Paola', 'Velasco','cs161020@uniwa.gr','69300000');
+INSERT INTO reservation VALUES (2, 114, '2022-06-01', '2014-06-06', 'Nikos', 'Panagis','cs161142@uniwa.gr','69300005');
+INSERT INTO reservation VALUES (3, 116, '2022-06-08', '2014-06-11', 'Maria', 'Velasco','cs161022@uniwa.gr','69300006');

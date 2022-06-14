@@ -25,7 +25,7 @@ if (!isset($_SESSION['username'])) {
 <body>
 <div class="table-container" style="margin-bottom: 100px;">
     <h1 class="heading">Ιστορικό Κρατήσεων</h1>
-    <table class="table" >
+    <table class="table">
         <thead>
         <tr>
             <th scope="col">ID</th>
