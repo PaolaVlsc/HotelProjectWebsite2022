@@ -1,5 +1,3 @@
-[ SCHEDULE TASKS !] https://trello.com/invite/b/Yhf8tSLK/fa069f8d01a3a77bb2fcd43860faccac/ecommerce
-
 A final project for the subject "Electronic Commerce and Entrepreneurship" at University of West Attica 2022. A Web Application for hotel booking. This project has 4 main functions.
  
 * Home page - Information about the hotel, such as category, offered services, number of rooms, etc., along with photos of the hotel and the area, address, and contact details.
@@ -74,8 +72,9 @@ A final project for the subject "Electronic Commerce and Entrepreneurship" at Un
 5. Then in your web browser, go to localhost/EliteHotel.
 
 # Extras
-Report paper 
+* Report paper: [Report paper](https://github.com/PaolaVlsc/HotelProjectWebsite2022/blob/master/extras/Ecommerce.pdf)
+* Εκφώνηση: https://eclass.uniwa.gr/modules/work/?course=CS141&get=29225&file_type=1
+
+[SCHEDULE TASKS!] https://trello.com/invite/b/Yhf8tSLK/fa069f8d01a3a77bb2fcd43860faccac/ecommerce
 
 
-
-https://eclass.uniwa.gr/modules/work/?course=CS141&get=29225&file_type=1
