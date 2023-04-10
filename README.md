@@ -78,13 +78,12 @@ A final project for the subject "Electronic Commerce and Entrepreneurship" at Un
 <img src="https://user-images.githubusercontent.com/87998374/230991925-aa17eb0d-83a0-44a7-a795-87508effc20a.png" alt="Messages" width="50%">
 </p>
 
-
-### Landing page
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/87998374/230991553-dc01e277-4e25-4118-a408-ef473b04cad9.png" alt="Rooms" width="50%">
-</p>
-
+# How to run
+1. Download all the files.
+2. Place them in the appropriate folder: xampp>htdocs>EliteHotel
+3. Activate xampp (apache & mysql).
+4. In phpmyadmin, import the database_elite.sql file.
+5. Then in your web browser, go to localhost/EliteHotel.
 
 [DAY 1]  26-05-22
 Front End pages DONE
